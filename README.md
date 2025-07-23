@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Solar System
 
-## Getting Started
+A modern web application for exploring our solar system using NASA API data.
 
-First, run the development server:
+## 🚀 Project Overview
+
+This application provides an interactive way to learn about planets, moons, and other celestial bodies in our solar system. Built with Next.js and designed to fetch real-time data from NASA's APIs.
+
+## ✨ Features
+
+- **Custom Space Theme**: Dark background with golden accents and space-inspired colors
+- **Modern Typography**: Orbitron font for headers, Inter for body text
+- **Responsive Design**: Works beautifully on all devices
+- **NASA API Ready**: Prepared for integration with real space data
+- **Smooth Animations**: Framer Motion ready for interactive experiences
+
+## 🛠 Technology Stack
+
+- **Next.js 15** - React framework with App Router
+- **React 19** - Latest React features
+- **Tailwind CSS 4** - Modern utility-first styling
+- **Framer Motion** - Animation library (ready to use)
+- **Google Fonts** - Orbitron & Inter fonts optimized by Next.js
+
+## 🎨 Design System
+
+### Colors
+
+- **Background**: `#110D1A` - Deep space dark
+- **Headers**: `#FFB742` - Solar golden yellow
+- **Text**: `#D8D8E0` - Light cosmic gray
+- **Primary Button**: `#020258` - Deep space navy
+- **Secondary**: `#1A1A2E` - Dark cosmic purple
+
+### Typography
+
+- **Headers**: Orbitron (futuristic, space-themed)
+- **Body Text**: Inter (clean, modern, readable)
+
+## 🚦 Getting Started
+
+1. **Install dependencies:**
+
+```bash
+npm install
+```
+
+2. **Run the development server:**
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. **Open your browser:**
+   Navigate to [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 📁 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+  app/
+    layout.jsx    # Root layout with fonts
+    page.jsx      # Homepage
+    globals.css   # Global styles & theme
+```
 
-## Learn More
+## 🔮 Next Steps
 
-To learn more about Next.js, take a look at the following resources:
+This foundation is ready for:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- 🪐 NASA API integration for planet data
+- 🎨 Interactive solar system visualization
+- 📱 Planet detail pages and components
+- ✨ Orbital animations with Framer Motion
+- 🌌 Advanced space-themed UI components
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🚀 Deployment
 
-## Deploy on Vercel
+Ready to deploy on Vercel, Netlify, or any modern hosting platform that supports Next.js.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Built with ❤️ for space exploration**

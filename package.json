@@ -1,6 +1,7 @@
 {
   "name": "solar-system",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "description": "A solar system information page using NASA API data",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
