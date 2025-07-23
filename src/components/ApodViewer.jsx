@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { nasaApodApi } from "../lib/api/nasaApodApi.js";
 
 export default function ApodViewer({ isOpen, onClose }) {
