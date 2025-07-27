@@ -2,9 +2,9 @@
 
 ## 🚀 Current Tasks
 
-### 1. **Add Real Planet Photos to Detail Pages** 📷
+### 1. **Add More Planet Information to Detail Pages** 📊
 
-- [ ] Replace emoji placeholders with actual NASA planet photographs
+- [ ] Expand planet data with more detailed information (temperature ranges, atmospheric composition, notable features, etc.)
 
 ### 2. **Real-Life Orbital Speed Realism** ⏰ _(Optional)_
 
