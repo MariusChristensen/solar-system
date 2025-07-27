@@ -67,7 +67,7 @@ export default function PlanetPageContent({ planetId }) {
         {/* Main Content Grid */}
         <div className="grid lg:grid-cols-2 gap-12 mb-12">
           {/* Planet Image */}
-          <div className="bg-space-card rounded-lg p-8 flex items-center justify-center min-h-[400px]">
+          <div className="bg-space-card rounded-lg p-8 flex items-center justify-center min-h-[400px] relative z-10">
             <div className="text-center">
               <div className="w-96 h-96 mx-auto mb-4 overflow-hidden rounded-lg border-2 border-space-header/30">
                 <img
@@ -92,7 +92,7 @@ export default function PlanetPageContent({ planetId }) {
 
           {/* Quick Facts */}
           <div className="space-y-6">
-            <div className="bg-space-card p-6 rounded-lg">
+            <div className="bg-space-card p-6 rounded-lg relative z-10">
               <h2 className="text-2xl font-header text-space-header mb-4">Quick Facts</h2>
               <div className="space-y-3 text-space-text font-body">
                 <div className="flex justify-between">
@@ -118,7 +118,7 @@ export default function PlanetPageContent({ planetId }) {
               </div>
             </div>
 
-            <div className="bg-space-card p-6 rounded-lg">
+            <div className="bg-space-card p-6 rounded-lg relative z-10">
               <h2 className="text-2xl font-header text-space-header mb-4">Interesting Facts</h2>
               <div className="space-y-4">
                 {details.interestingFacts.map((fact, index) => (

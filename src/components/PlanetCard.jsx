@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function PlanetCard({ planet }) {
   return (
-    <div className="bg-space-card p-6 rounded-lg border border-space-header/50">
+    <div className="bg-space-card p-6 rounded-lg border border-space-header/50 relative z-10">
       <h3 className="text-xl font-header text-space-header mb-2">{planet.name}</h3>
       <p className="text-space-text mb-4 font-body">{planet.description}</p>
 

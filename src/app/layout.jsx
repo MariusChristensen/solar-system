@@ -1,6 +1,7 @@
 import { Orbitron, Inter } from "next/font/google";
 import "./globals.css";
 import Navigation from "../components/Navigation";
+import StarField from "../components/StarField";
 
 const orbitron = Orbitron({
   variable: "--font-orbitron",
@@ -24,6 +25,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${orbitron.variable} ${inter.variable} font-body`}>
+        <StarField />
         <Navigation />
         <main className="pt-20">{children}</main>
       </body>

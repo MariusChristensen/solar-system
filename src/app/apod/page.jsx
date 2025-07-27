@@ -43,12 +43,8 @@ export default function ApodPage() {
     return (
       <div className="min-h-screen bg-space-bg flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-header text-space-header mb-4">
-            Loading NASA Picture...
-          </h1>
-          <p className="text-space-text font-body">
-            Fetching today's astronomy picture from NASA...
-          </p>
+          <h1 className="text-4xl font-header text-space-header mb-4">Loading NASA Picture...</h1>
+          <p className="text-space-text font-body">Fetching today's astronomy picture from NASA...</p>
         </div>
       </div>
     );
@@ -81,45 +77,26 @@ export default function ApodPage() {
         </div>
 
         {apod && (
-          <div className="bg-space-card rounded-lg overflow-hidden shadow-lg">
+          <div className="bg-space-card rounded-lg overflow-hidden shadow-lg relative z-10">
             {/* Image/Video */}
             <div className="aspect-video bg-black">
               {apod.mediaType === "image" ? (
-                <img
-                  src={apod.hdurl || apod.url}
-                  alt={apod.title}
-                  className="w-full h-full object-contain"
-                />
+                <img src={apod.hdurl || apod.url} alt={apod.title} className="w-full h-full object-contain" />
               ) : (
-                <iframe
-                  src={apod.url}
-                  title={apod.title}
-                  className="w-full h-full"
-                  allowFullScreen
-                />
+                <iframe src={apod.url} title={apod.title} className="w-full h-full" allowFullScreen />
               )}
             </div>
 
             {/* Content */}
             <div className="p-6">
               <div className="flex justify-between items-start mb-4">
-                <h2 className="text-2xl font-header text-space-header">
-                  {apod.title}
-                </h2>
-                <span className="text-sm text-space-text/60 font-body">
-                  {apod.date}
-                </span>
+                <h2 className="text-2xl font-header text-space-header">{apod.title}</h2>
+                <span className="text-sm text-space-text/60 font-body">{apod.date}</span>
               </div>
 
-              <p className="text-space-text font-body leading-relaxed mb-4">
-                {apod.explanation}
-              </p>
+              <p className="text-space-text font-body leading-relaxed mb-4">{apod.explanation}</p>
 
-              {apod.copyright && (
-                <p className="text-sm text-space-text/60 font-body">
-                  © {apod.copyright}
-                </p>
-              )}
+              {apod.copyright && <p className="text-sm text-space-text/60 font-body">© {apod.copyright}</p>}
             </div>
           </div>
         )}

@@ -176,12 +176,12 @@ export default function OrbitalSolarSystem({ planets }) {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
             transition={{ duration: 0.5 }}
-            className="flex items-center justify-center min-h-[600px] gap-12"
+            className="flex items-center justify-center min-h-[600px] gap-12 relative z-10 pt-16"
           >
             {/* Back Button */}
             <motion.button
               onClick={handleBackToOrbital}
-              className="absolute top-0 left-1/2 transform -translate-x-1/2 px-6 py-3 bg-space-header text-space-bg rounded-lg font-body"
+              className="absolute top-0 left-1/2 transform -translate-x-1/2 px-6 py-3 bg-space-header text-space-bg rounded-lg font-body z-20"
               whileTap={{ scale: 0.95 }}
             >
               ← Back to Solar System
