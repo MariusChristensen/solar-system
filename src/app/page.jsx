@@ -6,23 +6,15 @@ import OrbitalSolarSystem from "../components/OrbitalSolarSystem.jsx";
 
 export default function Home() {
   const [planets, setPlanets] = useState([]);
-  const [overview, setOverview] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function loadData() {
       try {
-        const [planetsResponse, overviewResponse] = await Promise.all([
-          nasaPlanetApi.getAllPlanets(),
-          nasaPlanetApi.getSolarSystemOverview(),
-        ]);
+        const planetsResponse = await nasaPlanetApi.getAllPlanets();
 
         if (planetsResponse.success) {
           setPlanets(planetsResponse.data);
-        }
-
-        if (overviewResponse.success) {
-          setOverview(overviewResponse.data);
         }
       } catch (error) {
         console.error("Failed to load NASA data:", error);

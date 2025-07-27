@@ -3,17 +3,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
-const PLANETS = [
-  { id: "mercury", name: "Mercury" },
-  { id: "venus", name: "Venus" },
-  { id: "earth", name: "Earth" },
-  { id: "mars", name: "Mars" },
-  { id: "jupiter", name: "Jupiter" },
-  { id: "saturn", name: "Saturn" },
-  { id: "uranus", name: "Uranus" },
-  { id: "neptune", name: "Neptune" },
-];
+import { PLANETS } from "../constants/planets";
 
 export default function Navigation() {
   const [isPlanetsOpen, setIsPlanetsOpen] = useState(false);
@@ -82,19 +72,12 @@ export default function Navigation() {
             >
               <span>PLANETS</span>
               <svg
-                className={`w-4 h-4 transition-transform ${
-                  isPlanetsOpen ? "rotate-180" : ""
-                }`}
+                className={`w-4 h-4 transition-transform ${isPlanetsOpen ? "rotate-180" : ""}`}
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M19 9l-7 7-7-7"
-                />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </button>
 

@@ -39,14 +39,12 @@ const ORBITAL_ANIMATION = {
 export default function OrbitalSolarSystem({ planets }) {
   const [focusedPlanet, setFocusedPlanet] = useState(null);
   const [isHoveringAnyPlanet, setIsHoveringAnyPlanet] = useState(false);
-  const [hoveredPlanet, setHoveredPlanet] = useState(null);
 
   const controls = useAnimationControls();
 
   const handlePlanetClick = (planet) => {
     // Clear hover states when focusing
     setIsHoveringAnyPlanet(false);
-    setHoveredPlanet(null);
     setFocusedPlanet(planet);
   };
 
@@ -136,28 +134,20 @@ export default function OrbitalSolarSystem({ planets }) {
               {planets.map((planet) => {
                 const position = getPlanetPosition(planet.id);
                 const orbital = ORBITAL_DATA[planet.id];
-                const isHovered = hoveredPlanet?.id === planet.id;
-                const scale = isHovered ? 2.0 : 1;
 
                 return (
                   <motion.button
                     key={planet.id}
                     onClick={() => handlePlanetClick(planet)}
-                    onMouseEnter={() => {
-                      setIsHoveringAnyPlanet(true);
-                      setHoveredPlanet(planet);
-                    }}
-                    onMouseLeave={() => {
-                      setIsHoveringAnyPlanet(false);
-                      setHoveredPlanet(null);
-                    }}
+                    onMouseEnter={() => setIsHoveringAnyPlanet(true)}
+                    onMouseLeave={() => setIsHoveringAnyPlanet(false)}
                     className="absolute rounded-full cursor-pointer"
                     style={{
                       width: `${orbital.size}px`,
                       height: `${orbital.size}px`,
                       left: "50%",
                       top: "50%",
-                      transform: `translate(-50%, -50%) translate(${position.x}px, ${position.y}px) scale(${scale})`,
+                      transform: `translate(-50%, -50%) translate(${position.x}px, ${position.y}px)`,
                       backgroundImage: `url(${orbital.image})`,
                       backgroundSize: "cover",
                       backgroundPosition: "center",
