@@ -40,6 +40,7 @@ export default function OrbitalSolarSystem({ planets }) {
   const [focusedPlanet, setFocusedPlanet] = useState(null);
   const [isHoveringAnyPlanet, setIsHoveringAnyPlanet] = useState(false);
   const [hoveredPlanet, setHoveredPlanet] = useState(null);
+
   const controls = useAnimationControls();
 
   const handlePlanetClick = (planet) => {
@@ -51,16 +52,18 @@ export default function OrbitalSolarSystem({ planets }) {
 
   const handleBackToOrbital = () => {
     setFocusedPlanet(null);
-    // Force restart orbital rotation
-    controls.start(ORBITAL_ANIMATION);
   };
 
   // Start rotation on mount AND when returning from focus
   useEffect(() => {
     if (!focusedPlanet) {
-      controls.start(ORBITAL_ANIMATION);
+      // Auto-trigger the rescue sequence with delay for component to settle
+      setTimeout(() => {
+        setIsHoveringAnyPlanet(true);
+        setTimeout(() => setIsHoveringAnyPlanet(false), 100);
+      }, 500);
     }
-  }, [controls, focusedPlanet]);
+  }, [focusedPlanet]);
 
   // Simple hover control
   useEffect(() => {
@@ -197,9 +200,7 @@ export default function OrbitalSolarSystem({ planets }) {
                 style={{
                   width: "300px",
                   height: "300px",
-                  backgroundImage: `url(${
-                    ORBITAL_DATA[focusedPlanet.id].image
-                  })`,
+                  backgroundImage: `url(${ORBITAL_DATA[focusedPlanet.id].image})`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}
