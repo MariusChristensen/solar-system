@@ -38,12 +38,8 @@ export default function Home() {
     return (
       <div className="min-h-screen flex items-center justify-center bg-space-bg px-6">
         <div className="text-center">
-          <h1 className="text-4xl font-header text-space-header mb-4">
-            Loading Solar System...
-          </h1>
-          <p className="text-space-text font-body">
-            Fetching data from NASA API...
-          </p>
+          <h1 className="text-4xl font-header text-space-header mb-4">Loading Solar System...</h1>
+          <p className="text-space-text font-body">Fetching data from NASA API...</p>
         </div>
       </div>
     );
@@ -54,18 +50,11 @@ export default function Home() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-5xl md:text-6xl font-header font-bold text-space-header mb-4">
-            Solar System Explorer
-          </h1>
+          <h1 className="text-5xl md:text-6xl font-header font-bold text-space-header mb-4">Solar System Explorer</h1>
         </div>
 
         {/* Orbital Solar System */}
         <OrbitalSolarSystem planets={planets} />
-
-        {/* Footer */}
-        <div className="mt-12 text-center text-space-text/60 font-body text-sm">
-          <p>Powered by NASA API & NASA APOD</p>
-        </div>
       </div>
     </div>
   );
