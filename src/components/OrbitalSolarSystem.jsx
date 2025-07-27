@@ -181,8 +181,7 @@ export default function OrbitalSolarSystem({ planets }) {
             {/* Back Button */}
             <motion.button
               onClick={handleBackToOrbital}
-              className="absolute top-0 left-1/2 transform -translate-x-1/2 px-6 py-3 bg-space-card text-space-text rounded-lg font-body hover:bg-space-header hover:text-space-bg transition-colors"
-              whileHover={{ scale: 1.05 }}
+              className="absolute top-0 left-1/2 transform -translate-x-1/2 px-6 py-3 bg-space-header text-space-bg rounded-lg font-body"
               whileTap={{ scale: 0.95 }}
             >
               ← Back to Solar System
